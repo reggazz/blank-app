@@ -578,7 +578,7 @@ def get_iam_token(oauth_token):
 
 
 
-tz = get_timezone(Latitude, Longitude)
+tz = get_timezone(57, 41)
 now = datetime.now(tz)
 
 inputs2 = {
