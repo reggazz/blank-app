@@ -588,12 +588,6 @@ dt = datetime.strptime(date_str, "%Y-%m-%d")
 # берём только дату (без времени)
 date_birth = dt.date()
 
-dateNow = inputs2.get("dateNow") or now.date()
-hourNow = inputs2.get("hourNow") or now.hour
-minutesNow = inputs2.get("minutesNow") or now.minute
-LatitudeNow = inputs2.get("LatitudeNow") or 0
-LongitudeNow = inputs2.get("LongitudeNow") or 0
-
 params = {
     "date": date_birth,
     "hour": 7,
