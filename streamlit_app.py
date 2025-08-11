@@ -582,6 +582,13 @@ import pytz  # если get_timezone возвращает tzinfo
 tz = get_timezone(57, 41)
 now = datetime.now(tz)
 
+date_str = "1986-05-23"
+# преобразуем строку в datetime, указав формат
+dt = datetime.strptime(date_str, "%Y-%m-%d")
+# берём только дату (без времени)
+date_birth = dt.date()
+
+
 inputs2 = {
     "dateNow": dateNow,          # обязательно передан
     "hourNow": hourNow,
@@ -597,7 +604,7 @@ LatitudeNow = inputs2.get("LatitudeNow") or 0
 LongitudeNow = inputs2.get("LongitudeNow") or 0
 
 params = {
-    "date": datetime(1986, 5, 23).date(),
+    "date": date_birth,
     "hour": 7,
     "minutes": 5,
     "Latitude": 57,
