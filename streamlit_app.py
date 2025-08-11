@@ -596,11 +596,11 @@ LatitudeNow = inputs2.get("LatitudeNow") or  0
 LongitudeNow = inputs2.get("LongitudeNow") or  0
 
 params = {
-    "date": date,
-    "hour": hour,
-    "minutes": minutes,
-    "Latitude": Latitude,
-    "Longitude": Longitude, 
+    # "date": date,
+    # "hour": hour,
+    # "minutes": minutes,
+    # "Latitude": Latitude,
+    # "Longitude": Longitude, 
     "dateNow": dateNow,
     "hourNow": hourNow,
     "minutesNow": minutesNow,
