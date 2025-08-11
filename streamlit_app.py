@@ -596,23 +596,17 @@ minutesNow = inputs2.get("minutesNow") or now.minute
 LatitudeNow = inputs2.get("LatitudeNow") or 0
 LongitudeNow = inputs2.get("LongitudeNow") or 0
 
-
-
-
-
-
-
 params = {
     # "date": date,
     # "hour": hour,
     # "minutes": minutes,
     # "Latitude": Latitude,
     # "Longitude": Longitude, 
-    "dateNow": dateNow,
-    "hourNow": hourNow,
-    "minutesNow": minutesNow,
-    "LatitudeNow": LatitudeNow,
-    "LongitudeNow": LongitudeNow,
+    "dateNow": now.date(),
+    "hourNow": now.hour,
+    "minutesNow": now.minute,
+    "LatitudeNow": 57,
+    "LongitudeNow": 41,
     "draw_aspects_mode": "all",# all natal transit transit-natal
     "zodiakType": "Альтернативный", # "Сидерический""Альтернативный""Тропический"
     "moonMonth": False, # True False
