@@ -576,5 +576,5 @@ def get_iam_token(oauth_token):
         print('Ошибка получения IAM токена:', response.text)
         return None
 
-
+swa()
 
