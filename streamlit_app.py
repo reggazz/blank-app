@@ -597,7 +597,7 @@ LatitudeNow = inputs2.get("LatitudeNow") or 0
 LongitudeNow = inputs2.get("LongitudeNow") or 0
 
 params = {
-    "date": datetime(1986, 5, 23).date(),,
+    "date": datetime(1986, 5, 23).date(),
     "hour": 7,
     "minutes": 5,
     "Latitude": 57,
