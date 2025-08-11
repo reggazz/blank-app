@@ -589,11 +589,11 @@ dt = datetime.strptime(date_str, "%Y-%m-%d")
 date_birth = dt.date()
 
 params = {
-    "date": date_birth,
-    "hour": 7,
-    "minutes": 5,
-    "Latitude": 57,
-    "Longitude": 41, 
+    # "date": date_birth,
+    # "hour": 7,
+    # "minutes": 5,
+    # "Latitude": 57,
+    # "Longitude": 41, 
     "dateNow": now.date(),
     "hourNow": now.hour,
     "minutesNow": now.minute,
