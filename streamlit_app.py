@@ -576,7 +576,8 @@ def get_iam_token(oauth_token):
         print('Ошибка получения IAM токена:', response.text)
         return None
 
-
+from datetime import datetime
+import pytz  # если get_timezone возвращает tzinfo
 
 tz = get_timezone(57, 41)
 now = datetime.now(tz)
@@ -588,12 +589,18 @@ inputs2 = {
     "LatitudeNow": LatitudeNow,
     "LongitudeNow": LongitudeNow,
 }
-# Если dateNow не передан, ставим now
-dateNow = inputs2.get("dateNow") or now
+
+dateNow = inputs2.get("dateNow") or now.date()
 hourNow = inputs2.get("hourNow") or now.hour
 minutesNow = inputs2.get("minutesNow") or now.minute
-LatitudeNow = inputs2.get("LatitudeNow") or  0
-LongitudeNow = inputs2.get("LongitudeNow") or  0
+LatitudeNow = inputs2.get("LatitudeNow") or 0
+LongitudeNow = inputs2.get("LongitudeNow") or 0
+
+
+
+
+
+
 
 params = {
     # "date": date,
