@@ -576,5 +576,41 @@ def get_iam_token(oauth_token):
         print('Ошибка получения IAM токена:', response.text)
         return None
 
-swa()
+
+
+tz = get_timezone(Latitude, Longitude)
+now = datetime.now(tz)
+
+inputs2 = {
+    "dateNow": dateNow,          # обязательно передан
+    "hourNow": hourNow,
+    "minutesNow": minutesNow,
+    "LatitudeNow": LatitudeNow,
+    "LongitudeNow": LongitudeNow,
+}
+# Если dateNow не передан, ставим now
+dateNow = inputs2.get("dateNow") or now
+hourNow = inputs2.get("hourNow") or now.hour
+minutesNow = inputs2.get("minutesNow") or now.minute
+LatitudeNow = inputs2.get("LatitudeNow") or  0
+LongitudeNow = inputs2.get("LongitudeNow") or  0
+
+params = {
+    "date": date,
+    "hour": hour,
+    "minutes": minutes,
+    "Latitude": Latitude,
+    "Longitude": Longitude, 
+    "dateNow": dateNow,
+    "hourNow": hourNow,
+    "minutesNow": minutesNow,
+    "LatitudeNow": LatitudeNow,
+    "LongitudeNow": LongitudeNow,
+    "draw_aspects_mode": "all",# all natal transit transit-natal
+    "zodiakType": "Альтернативный", # "Сидерический""Альтернативный""Тропический"
+    "moonMonth": False, # True False
+    "colorScheme": "rainbow",#rainbow gray 
+}
+swa(**params)
+# yandexGPT(swa(**params)[1])
 
