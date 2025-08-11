@@ -588,15 +588,6 @@ dt = datetime.strptime(date_str, "%Y-%m-%d")
 # берём только дату (без времени)
 date_birth = dt.date()
 
-
-inputs2 = {
-    "dateNow": dateNow,          # обязательно передан
-    "hourNow": hourNow,
-    "minutesNow": minutesNow,
-    "LatitudeNow": LatitudeNow,
-    "LongitudeNow": LongitudeNow,
-}
-
 dateNow = inputs2.get("dateNow") or now.date()
 hourNow = inputs2.get("hourNow") or now.hour
 minutesNow = inputs2.get("minutesNow") or now.minute
